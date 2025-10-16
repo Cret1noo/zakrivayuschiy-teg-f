@@ -13,4 +13,141 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: url("/images/background.jpg");
+  background-size: 100% 667px;
+  background-repeat: no-repeat;
+  font-family: var(--font-family-Inter);
+}
+
+.header {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 102px;
+}
+.header__content {
+  width: 100%;
+  padding: 122px 16px;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid black;
+}
+.header__heading {
+  font-family: var(--font-family-PressStart2P);
+  font-size: 49px;
+  line-height: 100%;
+  margin-bottom: 17px;
+}
+.header__subheading {
+  font-family: var(--font-family-PressStart2P);
+  font-size: 14px;
+  line-height: 100%;
+}
+.main__section {
+  width: 100%;
+}
+.card__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+}
+.card {
+  width: 100%;
+  border: 2px solid black;
+  padding: 0;
+  min-height: 327px;
+}
+.card__article {
+  width: 100%;
+}
+.card__heading {
+  width: 100%;
+  padding: 6px 10px;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold, 715);
+  background-color: white;
+  font-family: var(--font-family-Inter);
+  line-height: 100%;
+  color: black;
+}
+.card__img-holder {
+  width: 100%;
+  height: 371px;
+  position: relative;
+}
+.card__watermark {
+  position: absolute;
+  top: 32px;
+  right: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: black;
+  mix-blend-mode: hard-light;
+  text-shadow: 0px 0px 1px white;
+  font-family: var(--font-family-PressStart2P);
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card__body {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: var(--font-family-Inter);
+  font-weight: var(--font-weight-regular);
+}
+.card__footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  
+}
+.card__like-btn {
+  border: 2px solid black;
+  background-color: #fff;
+  font-family: var(--font-family-PressStart2P);
+  font-weight: 400;
+  padding: 12.5px 37px;
+  width: 130px;
+  height: 38px;
+  margin-top: 2px;
+}
+.card__icon-button {
+  
+}
+.card__like-btn-label {
+}
+
+.footer {
+}
+.button_save {
+}
+.button_black {
+}
+.button_save_text {
+}
+.dialog_floppy {
+}
+.dialog_floppy_content {
+}
+.dialog_button {
+}
+.button_floppy {
+}
+.dialog_text {
 }
