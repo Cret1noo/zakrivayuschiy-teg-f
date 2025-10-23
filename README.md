@@ -1,0 +1,1 @@
+[slozhno-sosredotochitsya-fd](https://github.com/Cret1noo/zakrivayuschiy-teg-f)
