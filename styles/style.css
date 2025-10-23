@@ -17,7 +17,8 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: var(--font-family-Inter);
+  font-family: var(--main-font);
+  margin-bottom: 100px;
 }
 
 .header {
@@ -34,14 +35,14 @@
   border: 2px solid black;
 }
 .header__heading {
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   line-height: 100%;
   margin-bottom: 20px;
   justify-self: center;
 }
 .header__subheading {
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-size: clamp(0.875rem, 0.226rem + 2.769vw, 1.438rem);
   line-height: 100%;
   text-transform: uppercase;
@@ -55,7 +56,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 49px;
+  gap: 48px;
   align-items: flex-start;
 }
 .card {
@@ -69,17 +70,16 @@
   max-width: 700px;
   margin-inline: auto;
   border: 2px solid var(--accent-color);
-  
 }
 .card__heading {
   width: 100%;
-  padding: 3px 10px;
+  padding: 8px 10px;
   border-bottom: 2px solid var(--accent-color);
   font-size: 18px;
   font-weight: var(--font-weight-bold, 715);
   background-color: var(--main-color);
-  font-family: var(--font-family-Inter);
-  line-height: 1.14;
+  font-family: var(--main-font);
+  line-height: 100%;
   color: black;
 }
 .card__img-holder {
@@ -97,10 +97,10 @@
   color: var(--accent-color);
   mix-blend-mode: hard-light;
   text-shadow: 0px 0px 1px var(--main-color);
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
 }
 @supports ((-webkit-text-stroke: 1px var(--main-color)) or (text-stroke: 1px var(--main-color))) {
-  .card__label {
+  .card__watermark {
     -webkit-text-stroke: 0.5px var(--main-color);
     text-stroke: 1px var(--main-color);
     text-shadow: none;
@@ -121,10 +121,9 @@
   padding-block: 25px;
   background-color: #fff;
   border-top: 2px solid var(--contour-color);
-  
 }
 .card__text {
-  font-family: var(--font-family-Inter);
+  font-family: var(--main-font);
   font-weight: var(--font-weight-regular);
   font-size: 18px;
   line-height: 21px;
@@ -148,7 +147,7 @@
 .card__like-button {
   border: 2px solid var(--accent-color);
   background-color: #fff;
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
@@ -158,6 +157,8 @@
   height: 38px;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .card__like-button::before {
@@ -167,7 +168,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background: var(--contour-color);         
+  background: var(--accent-color);
   z-index: 0;
   transition: width 0.6s ease-in-out;
   pointer-events: none;
@@ -175,6 +176,7 @@
 
 .card__like-button span,
 .card__like-button {
+  
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -196,7 +198,7 @@
   transform-origin: center;
 }
 .like-icon:hover .main-body {
-  fill: var(--contour-color); 
+  fill: var(--contour-color);
   transition: 0.3s linear 0.05s;
 }
 
@@ -205,10 +207,7 @@
   transition: 0.3s linear 0s;
 }
 
-.footer {
-  width: 100%;
-  margin-top: 49px;
-}
+
 .footer-button {
   display: flex;
   flex-direction: column;
@@ -222,11 +221,11 @@
   transition: box-shadow 0.5s ease;
   overflow: hidden;
   position: relative;
-  cursor: pointer;  
+  cursor: pointer;
   padding: 14px 17px;
-  margin: 0 auto; 
+  margin: 0 auto;
+  margin-top: 46px;
 }
-
 
 .footer-button::before {
   content: "";
@@ -235,7 +234,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background: var(--contour-color);         
+  background: var(--contour-color);
   z-index: 0;
   transition: width 0.6s ease-in-out;
   pointer-events: none;
@@ -256,25 +255,24 @@
 .footer-button:hover {
   color: var(--main-color);
 }
-.footer-button:hover .footer-floppy-icon  {
+.footer-button:hover .footer-floppy-icon {
   filter: invert(1);
 }
 
 .footer-floppy-icon {
-  position: relative; 
+  position: relative;
   z-index: 0;
-  transition: .3s;
+  fill: currentColor;
+  transition: 0.3s;
 }
 
-.floppy_content {
-  margin-left: 2px;
-}
+
 
 .button_save_text {
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-size: 14px;
   font-weight: 400;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .dialog_floppy[open] {
@@ -304,7 +302,7 @@ dialog::backdrop {
 
 .button_text {
   line-height: 90%;
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -320,7 +318,7 @@ dialog::backdrop {
   left: 0;
   width: 0%;
   height: 100%;
-  background: var(--contour-color);         
+  background: var(--contour-color);
   z-index: -1;
   transition: width 0.6s ease-in-out;
   pointer-events: none;
@@ -343,17 +341,16 @@ dialog::backdrop {
 }
 
 .dialog_text {
-  font-family: var(--font-family-PressStart2P);
+  font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
+  white-space: pre-line;
 }
 
 @media (width <= 375px) {
   .card__img-holder {
     height: 370px;
   }
-
-
 }

@@ -1,1 +1,3 @@
-https://github.com/Cret1noo/zakrivayuschiy-teg-f
+[![Live Demo](https://img.shields.io/badge/Live%20Demo--brightgreen?style=for-the-badge&color=000)](https://Сret1noo.github.io/zakrivayuschiy-teg-f/)
+[![View Site](https://img.shields.io/badge/View%20Site-💾-brightgreen?style=for-the-badge&color=32CD32)](https://Сret1noo.github.io/zakrivayuschiy-teg-f/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/Cret1noo/zakrivayuschiy-teg-f)
