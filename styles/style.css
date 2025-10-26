@@ -181,40 +181,39 @@
 
 .button {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  cursor: pointer;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid var(--contour-color);
+  font-family: var(--accent-font);
   padding-inline: 35px;
   padding-block: 10.5px;
-  font-family: var(--accent-font);
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+.button::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  mix-blend-mode: difference;
+  z-index: 0;
+}
+
+.button:hover::after {
+  transform: translateX(0);
+}
 .button:focus {
   outline: none;
-}
-
-.button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px var(--accent-color);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--accent-color);
-  transform: translateX(-100%);
-  will-change: transform;
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: translateX(0);
+  box-shadow: 2px 2px 0 #000;
 }
 
 .like-icon {
@@ -255,7 +254,6 @@
   transition: 0.3s;
   width: 21px;
   height: 21px;
-  fill: currentColor;
 }
 
 .dialog-floppy-icon {
@@ -263,6 +261,11 @@
   height: 39px;
   flex-shrink: 0;
   fill: #fff;
+}
+
+.footer-button:hover .footer-floppy-icon path {
+  fill: var(--main-color);
+  transition: fill 0.3s ease;
 }
 
 .button_save_text {
