@@ -271,11 +271,6 @@
   fill: #fff;
 }
 
-.footer-button:hover .footer-floppy-icon path {
-  fill: var(--main-color);
-  transition: fill 0.3s ease;
-}
-
 .button_save_text {
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
@@ -293,7 +288,6 @@
   max-width: 353px;
   padding: 25px 21px;
   gap: 26px;
-  opacity: 0.5;
 }
 
 .dialog_floppy_content {
@@ -357,7 +351,6 @@ dialog::backdrop {
   .dialog_floppy[open] {
     padding: 25px 40px;
     gap: 30px;
-    opacity: 0.5;
   }
 
   .dialog_floppy_content {
